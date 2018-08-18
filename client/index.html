@@ -61,12 +61,14 @@
     <script src="js/app/models/Negociacao.js"></script>
     <script>
 
-        var instacia1 = new Negociacao();
-        console.log(instacia1);
+        var n1 = new Negociacao(new Date(), 5, 700);
+
+        var volume = n1.getVolume();
+        console.log(volume);
         
-        var instacia2 = new Negociacao();
-        console.log(instacia1);
-        
+        var n2 = new Negociacao(new Date(), 10, 1000);
+        volume = n2.getVolume();
+        console.log(volume);
     </script>
 </body>
 </html>
