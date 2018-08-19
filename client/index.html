@@ -63,12 +63,22 @@
 
         var n1 = new Negociacao(new Date(), 5, 700);
 
+        //retorno do metodo
         var volume = n1.getVolume();
-        console.log(volume);
+        console.log(volume + ' - volume');
         
-        var n2 = new Negociacao(new Date(), 10, 1000);
-        volume = n2.getVolume();
-        console.log(volume);
+        //Atribuindo valor à propriedade da instancia
+        // n1.quantidade = 10;
+        // console.log(n1.quantidade);
+        // console.log(volume);
+        
+        //Propriedade privada acessivel, porém incorreto
+        console.log(n1._quantidade + ' - prop privada');
+
+        //Acessando a propriedade com getter
+        console.log(n1.quantidade + ' - prop getter');
+        console.log(n1.valor + ' - prop getter');
+        
     </script>
 </body>
 </html>
