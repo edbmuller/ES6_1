@@ -61,7 +61,17 @@
     <script src="js/app/models/Negociacao.js"></script>
     <script>
 
-        var n1 = new Negociacao(new Date(), 5, 700);
+        var hoje = new Date();
+
+        var n1 = new Negociacao(hoje, 5, 700);
+        
+        hoje.setDate(11);
+
+        console.log(n1.data);
+
+        // console.log(Object.isFrozen(n1));
+        // Object.freeze(n1);
+        //console.log(Object.isFrozen(n1));
 
         //retorno do metodo
         var volume = n1.getVolume();
@@ -74,11 +84,12 @@
         
         //Propriedade privada acessivel, porém incorreto
         console.log(n1._quantidade + ' - prop privada');
-
+        
         //Acessando a propriedade com getter
         console.log(n1.quantidade + ' - prop getter');
         console.log(n1.valor + ' - prop getter');
         
+
     </script>
 </body>
 </html>
