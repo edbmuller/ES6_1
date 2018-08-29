@@ -1,15 +1,12 @@
 class Negociacao {
-    
-    //Declaração das propriedades 
+    // Declaração das propriedades
     constructor(data, quantidade, valor) {
-        
         this._data = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
         Object.freeze(this);
     }
-    
-    //Getters das propriedades
+    // Getters
     get data() {
         return new Date(this._data.getTime());
     }
@@ -19,11 +16,12 @@ class Negociacao {
     get valor() {
         return this._valor;
     }
-    
-    /*** Metodos: ***/
 
-    getVolume() {
-        return this._quantidade * this._valor;
+    // Métodos
+    get valor() {
+        return this._valor * this._quantidade;
     }
 
-}   
+
+
+}
