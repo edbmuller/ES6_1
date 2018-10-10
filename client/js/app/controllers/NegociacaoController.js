@@ -10,6 +10,10 @@ class NegociacaoController {
     this._inputValor = $('#valor');    
     this._listaNegociacoes = new ListaNegociacoes();
     this._negociacoesView = new NegociacoesView($('#negociacoesView'));
+<<<<<<< HEAD
+=======
+
+>>>>>>> 57e0c442961266092ad383f63bc12222c8e59b16
     this._negociacoesView.update(this._listaNegociacoes);
   }
   
@@ -19,7 +23,10 @@ class NegociacaoController {
     
     // cria a negociação utilizando o modelo negociacoes
     this._listaNegociacoes.adiciona(this._criaNegociacao());
+<<<<<<< HEAD
     // TODO: Criar função para salvar essa lista no index db > TODO: Pensar como vou recuperar essa lista do indexdb
+=======
+>>>>>>> 57e0c442961266092ad383f63bc12222c8e59b16
     this._negociacoesView.update(this._listaNegociacoes);
     this._limpaFormulario();  
     // console.log(this._listaNegociacoes.negociacoes);
