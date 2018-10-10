@@ -18,7 +18,7 @@ class Negociacao {
     }
 
     // Métodos
-    get valor() {
+    get volume() {
         return this._valor * this._quantidade;
     }
 }

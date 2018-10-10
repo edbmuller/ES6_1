@@ -9,16 +9,20 @@ class NegociacaoController {
     this._inputQuantidade = $('#quantidade');
     this._inputValor = $('#valor');    
     this._listaNegociacoes = new ListaNegociacoes();
+    this._negociacoesView = new NegociacoesView($('#negociacoesView'));
+    this._negociacoesView.update(this._listaNegociacoes);
   }
-
+  
   //adiciona negociação
   adiciona(event) {
     event.preventDefault();
-
+    
     // cria a negociação utilizando o modelo negociacoes
     this._listaNegociacoes.adiciona(this._criaNegociacao());
+    // TODO: Criar função para salvar essa lista no index db > TODO: Pensar como vou recuperar essa lista do indexdb
+    this._negociacoesView.update(this._listaNegociacoes);
     this._limpaFormulario();  
-    console.log(this._listaNegociacoes.negociacoes);
+    // console.log(this._listaNegociacoes.negociacoes);
   } 
 
   _criaNegociacao() {
