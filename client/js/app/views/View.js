@@ -6,7 +6,7 @@ class View {
         this._elemento = elemento;
     }
 
-    template() {
+    _template() {
 
         throw new Error('O metodo _template() precisa ser implementado na classe View filha!');
     }
